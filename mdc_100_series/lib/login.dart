@@ -11,7 +11,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: EdgeInsets.symmetric(horizontal: 24.0),
           children: <Widget>[
             SizedBox(
               height: 80.0,
@@ -25,10 +25,47 @@ class _LoginPageState extends State<LoginPage> {
                 Text('SHRINE'),
               ],
             ),
-            SizedBox(height: 120.0,)
+            SizedBox(
+              height: 120.0,
+            ),
+            TextField(
+              controller: _usernammeController,
+              decoration: InputDecoration(filled: true, labelText: 'Username'),
+            ),
+            SizedBox(
+              height: 12.0,
+            ),
+            TextField(
+              controller: _passwordController,
+              decoration: InputDecoration(
+                filled: true,
+                labelText: 'Password',
+              ),
+              obscureText: true,
+            ),
+            ButtonBar(
+              children: <Widget>[
+                FlatButton(
+                  child: Text('CANCEL'),
+                  onPressed: () {
+                    _usernammeController.clear();
+                    _passwordController.clear();
+                  },
+                ),
+                RaisedButton(
+                  child: Text('NEXT'),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            )
           ],
         ),
       ),
     );
   }
 }
+
+final _usernammeController = TextEditingController();
+final _passwordController = TextEditingController();
