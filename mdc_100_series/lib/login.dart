@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'colors.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -28,20 +29,41 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 120.0,
             ),
-            TextField(
-              controller: _usernammeController,
-              decoration: InputDecoration(filled: true, labelText: 'Username'),
+            // TextField(
+            //   controller: _usernammeController,
+            //   decoration: InputDecoration(
+            //       // filled: true,
+            //       labelText: 'Username'),
+            // ),
+            AccentColorOverride(
+              color: kShrineBrown900,
+              child: TextField(
+                controller: _usernammeController,
+                decoration: InputDecoration(
+                  labelText: 'Username',
+                ),
+              ),
             ),
             SizedBox(
               height: 12.0,
             ),
-            TextField(
-              controller: _passwordController,
-              decoration: InputDecoration(
-                filled: true,
-                labelText: 'Password',
+            // TextField(
+            //   controller: _passwordController,
+            //   decoration: InputDecoration(
+            //     // filled: true,
+            //     labelText: 'Password',
+            //   ),
+            //   obscureText: true,
+            // ),
+            AccentColorOverride(
+              color: kShrineBrown900,
+              child: TextField(
+                controller: _passwordController,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                ),
+                obscureText: true,
               ),
-              obscureText: true,
             ),
             ButtonBar(
               children: <Widget>[
@@ -57,6 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     Navigator.pop(context);
                   },
+                  elevation: 8.0,
                 ),
               ],
             )
@@ -69,3 +92,22 @@ class _LoginPageState extends State<LoginPage> {
 
 final _usernammeController = TextEditingController();
 final _passwordController = TextEditingController();
+
+class AccentColorOverride extends StatelessWidget {
+  const AccentColorOverride({Key key, this.color, this.child})
+      : super(key: key);
+
+  final Color color;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return Theme(
+      child: child,
+      data: Theme.of(context).copyWith(
+        accentColor: color,
+        brightness: Brightness.dark,
+      ),
+    );
+  }
+}
