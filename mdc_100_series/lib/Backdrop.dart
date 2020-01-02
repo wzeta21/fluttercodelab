@@ -34,7 +34,8 @@ class _BackdropState extends State<Backdrop>
       key: _backdropKey,
       children: <Widget>[
         widget.backLayer,
-        widget.frontLayer,
+        // widget.frontLayer,
+        _FrontLayer(child: widget.frontLayer,)
       ],
     );
   }
@@ -74,4 +75,31 @@ class _BackdropState extends State<Backdrop>
       body: _buildStack(),
     );
   }
+}
+
+class _FrontLayer extends StatelessWidget {
+  const _FrontLayer({
+    Key key,
+    this.child,
+  }) : super(key: key);
+
+  final Widget child;
+
+  Widget build(BuildContext context){
+    return Material(
+      elevation: 16.0,
+      shape: BeveledRectangleBorder(
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(46.0)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Expanded(
+            child: child,
+          )
+        ],
+      ),
+    );
+  }
+
 }
