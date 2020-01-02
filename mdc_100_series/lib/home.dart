@@ -62,7 +62,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        brightness: Brightness.light,
+        // brightness: Brightness.light,
+        brightness: Brightness.dark,
         leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {
