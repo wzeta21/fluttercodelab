@@ -5,6 +5,8 @@ import 'login.dart';
 
 import 'colors.dart';
 
+import 'supplemental/cut_corners_border.dart';
+
 class ShrineApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -51,7 +53,8 @@ ThemeData _buildShrineTheme() {
       color: kShrineBrown900,
     ),
     inputDecorationTheme: InputDecorationTheme(
-      border: OutlineInputBorder(),
+      // border: OutlineInputBorder(),
+      border: CutCornersBorder(),
     ),
   );
 }
