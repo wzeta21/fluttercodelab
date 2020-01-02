@@ -60,35 +60,36 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // brightness: Brightness.light,
-        brightness: Brightness.dark,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {
-            print('menu button');
-          },
-        ),
-        title: Text('SHRINE'),
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              print('Search button');
-            },
-          ),
-          IconButton(
-            icon: Icon(Icons.tune),
-            onPressed: () {
-              print('Filter button');
-            },
-          )
-        ],
-      ),
-      body: AsymmetricView(
-        products: ProductsRepository.loadProducts(Category.all),
-      ),
-    );
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     // brightness: Brightness.light,
+    //     brightness: Brightness.dark,
+    //     leading: IconButton(
+    //       icon: Icon(Icons.menu),
+    //       onPressed: () {
+    //         print('menu button');
+    //       },
+    //     ),
+    //     title: Text('SHRINE'),
+    //     actions: <Widget>[
+    //       IconButton(
+    //         icon: Icon(Icons.search),
+    //         onPressed: () {
+    //           print('Search button');
+    //         },
+    //       ),
+    //       IconButton(
+    //         icon: Icon(Icons.tune),
+    //         onPressed: () {
+    //           print('Filter button');
+    //         },
+    //       )
+    //     ],
+    //   ),
+    //   body: AsymmetricView(
+    //     products: ProductsRepository.loadProducts(Category.all),
+    //   ),
+    // );
+    return AsymmetricView(products: ProductsRepository.loadProducts(Category.all));
   }
 }
