@@ -5,6 +5,8 @@ import 'model/product.dart';
 import 'supplemental/asymmetric_view.dart';
 
 class HomePage extends StatelessWidget {
+  final Category category;
+  const HomePage({this.category: Category.all});
   // List<Card> _buildGridCards(BuildContext context) {
   //   List<Product> products = ProductsRepository.loadProducts(Category.all);
   //   if (products == null || products.isEmpty) {
@@ -90,6 +92,6 @@ class HomePage extends StatelessWidget {
     //     products: ProductsRepository.loadProducts(Category.all),
     //   ),
     // );
-    return AsymmetricView(products: ProductsRepository.loadProducts(Category.all));
+    return AsymmetricView(products: ProductsRepository.loadProducts(category));
   }
 }
