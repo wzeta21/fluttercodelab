@@ -7,7 +7,7 @@ import 'colors.dart';
 
 import 'supplemental/cut_corners_border.dart';
 
-import 'Backdrop.dart';
+import 'backdrop.dart';
 import 'model/product.dart';
 
 class ShrineApp extends StatelessWidget {
