@@ -9,6 +9,11 @@ final dummySnapshot = [
   {"name": "Richard", "votes": 11},
   {"name": "Ike", "votes": 10},
   {"name": "Justin", "votes": 1},
+  {"name": "Keyla", "votes": 20},
+  {"name": "Andressa", "votes": 13},
+  {"name": "Richard", "votes": 10},
+  {"name": "Ikell", "votes": 15},
+  {"name": "Martín", "votes": 8},
 ];
 
 class MyApp extends StatelessWidget {

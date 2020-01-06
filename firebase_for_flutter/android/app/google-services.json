@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "586398509252",
+    "firebase_url": "https://zetaapp-31458.firebaseio.com",
+    "project_id": "zetaapp-31458",
+    "storage_bucket": "zetaapp-31458.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586398509252:android:8f8d2a6ae5b53624b08191",
+        "android_client_info": {
+          "package_name": "com.example.firebase_for_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586398509252-91u6s8nmfkm80ndsojhvopr55nd4m56i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhUphw6SyHQeRdvgF1VPXMojHjrBhvjd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586398509252-91u6s8nmfkm80ndsojhvopr55nd4m56i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
