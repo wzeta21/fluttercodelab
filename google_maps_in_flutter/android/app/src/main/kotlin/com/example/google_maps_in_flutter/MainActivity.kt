@@ -1,4 +1,4 @@
-package com.example.google_maps_in_flutter
+package com.bo.zeta21.google_maps_in_flutter
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
